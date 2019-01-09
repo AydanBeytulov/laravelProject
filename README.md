@@ -1,5 +1,5 @@
 # CV project
-Laravel project - not finished yet 
+Laravel project - not finished yet (in progress)
 
 Here I use Laravel, MySQL, Vue, Redis
 
