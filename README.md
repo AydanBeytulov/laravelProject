@@ -5,14 +5,14 @@ Here I use Laravel, MySQL, Vue, Redis
 
 Here some tags to review it faster: 
 
-API:
+__API:__
 
 [/app/Http/Controllers/API/APIController.php - Custom API](/app/Http/Controllers/API/APIController.php)
 
 [/app/Http/Controllers/API/FoodsAPI.php - API with resource](/app/Http/Controllers/API/FoodsAPI.php)
 
 
-Controllers: 
+__Controllers:__
 
 [/app/Http/Controllers/Controller.php](/app/Http/Controllers/Controller.php)
 
@@ -22,19 +22,19 @@ Controllers:
 
 [/app/Http/Controllers/Room/HomeController.php](/app/Http/Controllers/Room/HomeController.php)
 
-Models: 
+__Models:__ 
 
 [/app/RoomsCart.php](/app/RoomsCart.php)
 
 [/app/RoomsCartOrder.php](/app/RoomsCartOrder.php)
 
-Routes:
+__Routes:__
 
 [/routes/web.php](/routes/web.php)
 
 [/routes/api.php](/routes/api.php)
 
-Vue template: 
+__Vue template:__ 
 
 [/resources/js/components/room/FoodCart.vue](/resources/js/components/room/FoodCart.vue)
 
@@ -42,29 +42,29 @@ Vue template:
 
 [/resources/js/components/room/ListFoods.vue](/resources/js/components/room/ListFoods.vue)
 
-Blade template: 
+__Blade template:__ 
 
 [/resources/views/room/home.blade.php](/resources/views/room/home.blade.php)
 
 [/resources/views/room/roomOptions.blade.php](/resources/views/room/roomOptions.blade.php)
 
-Middleware:
+__Middleware:__
 
 [/app/Http/Middleware/UserRoles.php](/app/Http/Middleware/UserRoles.php)
 
-Redis: 
+__Redis:__
 
 [/app/Http/Controllers/Controller.php](/app/Http/Controllers/Controller.php)
 
-JQuery:
+__JQuery:__
 
 [/public/js/main.js](/public/js/main.js)
 
-Resource: 
+__Resource:__ 
 
 [/app/Http/Resources/FoodsResource.php](/app/Http/Resources/FoodsResource.php)
 
-Migration: 
+__Migration:__ 
 
 [/database/migrations/2019_01_06_114543_create_rooms_cart_orders.php](/database/migrations/2019_01_06_114543_create_rooms_cart_orders.php)
 
@@ -72,21 +72,21 @@ Migration:
 
 [/database/migrations/2014_10_12_000000_create_users_table.php](/database/migrations/2014_10_12_000000_create_users_table.php)
 
-Seeds: 
+__Seeds:__ 
 
 [/database/seeds/FoodsTableSeeder.php - Seed with Factory](/database/seeds/FoodsTableSeeder.php)
 
 [/database/seeds/RoomInfoTableSeeder.php](/database/seeds/RoomInfoTableSeeder.php)
 
-Factories:
+__Factories:__
 
 [/database/factories/FoodsFactory.php](/database/factories/FoodsFactory.php)
 
-Events: 
+__Events:__ 
 
 [/app/Events/OrderFoods.php](/app/Events/OrderFoods.php)
 
-Listeners: 
+__Listeners:__ 
 
 [/app/Listeners/OrderFoodsEvent.php](/app/Listeners/OrderFoodsEvent.php)
 
