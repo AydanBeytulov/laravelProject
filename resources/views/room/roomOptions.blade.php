@@ -11,7 +11,7 @@
                     <div class="card-body">
 
                         <a href="{{ route("home") }}">Back</a>
-test
+
 
                         <table width="100%">
                             <thead>
