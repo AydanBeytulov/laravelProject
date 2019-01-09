@@ -47,7 +47,6 @@ class Controller extends BaseController
      * @return string
      */
 
-    //@TODO : Redis
     public static function getCurrentLanguage(){
         $default = "EN";
 
@@ -67,7 +66,7 @@ class Controller extends BaseController
      * @param $language
      * @return bool
      */
-    //@TODO : Redis
+
     public function setCurrentLanguage($language){
 
         $availableLanguages = array(
@@ -115,7 +114,7 @@ class Controller extends BaseController
      * @param $getDataFunction
      * @return array|mixed
      */
-    //@TODO : Redis
+
     public function loadOnlyOnce($name, $getDataFunction){
 
         if(empty($this->loadOnlyOnceHolder[$name])){

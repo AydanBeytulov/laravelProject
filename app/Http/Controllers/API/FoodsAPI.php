@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
  */
 class FoodsAPI extends Controller
 {
-    //@TODO : API with resource
+
     /**
      * FoodsAPI constructor.
      */

@@ -15,8 +15,6 @@ class OrderFoods
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    //@TODO: Event after user make order
-
     /**
      * Create a new event instance.
      *

@@ -25,7 +25,7 @@ class LoginEvent
      * @return void
      */
 
-    //@TODO : Listener, refresh user data after login
+
     public function handle(Login $event)
     {
         MainController::refreshLoadOnlyOnce("currentUserData");

@@ -49,5 +49,5 @@
             }
         }
     }
-    //@TODO : VUE template
+
 </script>

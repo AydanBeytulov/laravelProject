@@ -1,6 +1,5 @@
 <?php
 
-//@TODO : Simple Factory
 
 use Faker\Generator as Faker;
 

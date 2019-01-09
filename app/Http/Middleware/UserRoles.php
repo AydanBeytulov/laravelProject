@@ -16,7 +16,7 @@ class UserRoles
      * @param  array  $roles
      * @return mixed
      */
-    //@TODO : Middleware, users have roles
+
     public function handle($request, Closure $next, ... $roles)
     {
 

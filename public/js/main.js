@@ -1,5 +1,3 @@
-//@TODO : JQ code
-
 $(document).ready(function(){
 
     let roomOptionsCheck = $(".roomOptionsCheck") ;

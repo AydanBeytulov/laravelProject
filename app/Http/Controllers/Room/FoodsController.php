@@ -21,8 +21,6 @@ use Illuminate\Support\Facades\Log;
 class FoodsController extends Controller
 {
 
-    //@TODO : There is some controller in this folder
-
     /**
      * Show foods index page
      *
@@ -84,7 +82,6 @@ class FoodsController extends Controller
      * @return bool
      */
     public static function buyProductsFromCart($products){
-        //@TODO : Transaction
 
         //@TODO : GET USER ID
 

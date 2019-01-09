@@ -12,7 +12,7 @@ class FoodsResource extends JsonResource
      * @param  \Illuminate\Http\Request  $request
      * @return array
      */
-    //@TODO : Resource
+
     public function toArray($request)
     {
         return [

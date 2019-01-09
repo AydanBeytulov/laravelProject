@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomsCart extends Model
 {
-    //@TODO : Models
     protected $table = "rooms_cart";
 
     public function image()

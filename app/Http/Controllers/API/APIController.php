@@ -14,10 +14,6 @@ use App\Http\Controllers\Controller;
 class APIController extends Controller
 {
 
-
-    //@TODO : API functions
-
-    //@TODO -> да се видят евентите
     //@TODO -> Да видя да защитя API-то с токън
 
     /**

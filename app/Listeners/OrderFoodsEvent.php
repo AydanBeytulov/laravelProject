@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Log;
 class OrderFoodsEvent
 {
 
-    //@TODO: Listener after user make order
-
     /**
      * Create the event listener.
      *

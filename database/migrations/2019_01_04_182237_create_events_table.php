@@ -14,8 +14,6 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        //@TODO: Migration files in this folder
-
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');

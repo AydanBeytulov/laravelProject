@@ -13,7 +13,6 @@
 
 // USER ROLES : room , user , admin  ->middleware('user.roles:room')
 
-//@TODO: Routers
 
 // Index page
 Route::get('/', "Controller@index");

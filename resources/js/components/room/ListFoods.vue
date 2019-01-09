@@ -67,5 +67,5 @@
 
         }
     }
-    //@TODO : VUE template
+
 </script>
