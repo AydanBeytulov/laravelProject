@@ -1,7 +1,7 @@
 # CV project
 Laravel project - not finished yet (in progress)
 
-Here I use Laravel, MySQL, Vue, Redis
+For now I use Laravel, MySQL, Vue, Redis
 
 Here some tags to review it faster: 
 
