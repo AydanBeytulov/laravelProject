@@ -34,6 +34,32 @@ Routes:
 
 [/routes/api.php](/routes/api.php)
 
+Vue template: 
+
+[/resources/js/components/room/FoodCart.vue](/resources/js/components/room/FoodCart.vue)
+
+[/resources/js/components/room/Foods.vue](/resources/js/components/room/Foods.vue)
+
+[/resources/js/components/room/ListFoods.vue](/resources/js/components/room/ListFoods.vue)
+
+Blade template: 
+
+[/resources/views/room/home.blade.php](/resources/views/room/home.blade.php)
+
+[/resources/views/room/roomOptions.blade.php](/resources/views/room/roomOptions.blade.php)
+
+Middleware:
+
+[/app/Http/Middleware/UserRoles.php](/app/Http/Middleware/UserRoles.php)
+
+Redis: 
+
+[/app/Http/Controllers/Controller.php](/app/Http/Controllers/Controller.php)
+
+JQuery:
+
+[/public/js/main.js](/public/js/main.js)
+
 Resource: 
 
 [/app/Http/Resources/FoodsResource.php](/app/Http/Resources/FoodsResource.php)
@@ -64,28 +90,4 @@ Listeners:
 
 [/app/Listeners/OrderFoodsEvent.php](/app/Listeners/OrderFoodsEvent.php)
 
-Middleware:
 
-[/app/Http/Middleware/UserRoles.php](/app/Http/Middleware/UserRoles.php)
-
-Redis: 
-
-[/app/Http/Controllers/Controller.php](/app/Http/Controllers/Controller.php)
-
-JQuery:
-
-[/public/js/main.js](/public/js/main.js)
-
-Vue template: 
-
-[/resources/js/components/room/FoodCart.vue](/resources/js/components/room/FoodCart.vue)
-
-[/resources/js/components/room/Foods.vue](/resources/js/components/room/Foods.vue)
-
-[/resources/js/components/room/ListFoods.vue](/resources/js/components/room/ListFoods.vue)
-
-Blade template: 
-
-[/resources/views/room/home.blade.php](/resources/views/room/home.blade.php)
-
-[/resources/views/room/roomOptions.blade.php](/resources/views/room/roomOptions.blade.php)
