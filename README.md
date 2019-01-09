@@ -6,7 +6,7 @@ Here I use Laravel, MySQL, Vue, Redis
 Here some tags to review it faster: 
 
 API:
-Custom API (/app/Http/Controllers/API/APIController.php)
+[Custom API](/app/Http/Controllers/API/APIController.php)
 
 Controllers: 
 
