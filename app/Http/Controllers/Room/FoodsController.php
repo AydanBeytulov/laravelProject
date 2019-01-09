@@ -81,52 +81,58 @@ class FoodsController extends Controller
      * @param $products
      * @return bool
      */
-    public static function buyProductsFromCart($products){
+    public function buyProductsFromCart($products){
 
-        //@TODO : GET USER ID haha
+        $userID = Auth::guard('api')->id();
 
-       DB::beginTransaction();
-        try {
-            $roomCartOrder = new RoomsCartOrder();
-            $roomCartOrder->userId = 0;
-            $roomCartOrder->itemTable = "foods";
-            $roomCartOrder->totalPrice = 0;
-            $roomCartOrder->save();
+        if($userID){
+            DB::beginTransaction();
+            try {
+                $roomCartOrder = new RoomsCartOrder();
+                $roomCartOrder->userId = $userID;
+                $roomCartOrder->itemTable = "foods";
+                $roomCartOrder->totalPrice = 0;
+                $roomCartOrder->save();
 
-            $insertID = $roomCartOrder->id ;
-            $totalPrice = 0;
+                $insertID = $roomCartOrder->id ;
+                $totalPrice = 0;
 
-            foreach($products as $product){
-                $roomCart = new RoomsCart();
-                $roomCart->userId =0;
-                $roomCart->orderId = $insertID;
-                $roomCart->name = $product['name'];
-                $roomCart->qty = $product['qty'];
-                $roomCart->itemTable = "foods";
-                $roomCart->itemId = $product['id'];
-                $roomCart->price = $product['price'];
-                $roomCart->totalPrice = $product['qty'] * $product['price'];
-                $roomCart->save();
-                $totalPrice += $roomCart->totalPrice ;
+                foreach($products as $product){
+                    $roomCart = new RoomsCart();
+                    $roomCart->userId =$userID;
+                    $roomCart->orderId = $insertID;
+                    $roomCart->name = $product['name'];
+                    $roomCart->qty = $product['qty'];
+                    $roomCart->itemTable = "foods";
+                    $roomCart->itemId = $product['id'];
+                    $roomCart->price = $product['price'];
+                    $roomCart->totalPrice = $product['qty'] * $product['price'];
+                    $roomCart->save();
+                    $totalPrice += $roomCart->totalPrice ;
+                }
+
+                $roomCartOrder->totalPrice = $totalPrice ;
+                $roomCartOrder->save();
+
+
+                $roomUpdate = RoomsInfo::where("userId",$userID)->first();
+                $roomUpdate->totalAmount  = $totalPrice;
+                $roomUpdate->save();
+
+
+                DB::commit();
+            } catch (\Exception $e) {
+                DB::rollback();
+                return false;
             }
 
-            $roomCartOrder->totalPrice = $totalPrice ;
-            $roomCartOrder->save();
+            Event::fire(new OrderFoods($insertID));
 
-/*
-            $roomUpdate = RoomsInfo::where("userId",Auth::id())->first();
-            $roomUpdate->totalAmount  += $roomCart->totalPrice;
-            $roomUpdate->save();
-    */
-
-          DB::commit();
-        } catch (\Exception $e) {
-            DB::rollback();
+            return true;
+        }else{
             return false;
         }
 
-        Event::fire(new OrderFoods($insertID));
 
-        return true;
     }
 }

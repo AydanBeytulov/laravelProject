@@ -39,8 +39,8 @@
                                 <tr style="border-top:2px solid rgba(0, 0, 0, 0.125);">
                                     <td>{{ $item->id }}</td>
                                     <td>
-                                        @foreach ($item->getItems as $item)
-                                            {{ $item->name }} - {{ $item->qty }} / {{ $item->price }}, Total - {{ $item->price }}
+                                        @foreach ($item->getItems as $product)
+                                            {{ $product->name }} - {{ $product->qty }} / {{ $product->price }}, Total - {{ $product->price }}
                                             <br>
                                         @endforeach
                                     </td>

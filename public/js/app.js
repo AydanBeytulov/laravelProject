@@ -1810,9 +1810,9 @@ __webpack_require__.r(__webpack_exports__);
       if (confirm("Are you sure ?")) {
         var saveThis = this;
         window.axios.post('/api/makeFoodsOrder', {
-          products: this.$props.cartProducts
+          products: this.$props.cartProducts,
+          api_token: "mwns7bequ6nn3KQitPu8O7AtqSIAGqwRtzuds9aMFpQ9iYsa2DWAZ5NDKnsd"
         }).then(function (response) {
-          console.log(response);
           saveThis.$props.cartProducts = [];
           localStorage.cartProducts = JSON.stringify(saveThis.$props.cartProducts);
         }).catch(function (error) {
@@ -1878,7 +1878,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     var saveThis = this;
-    window.Axios.get('/api/Foods').then(function (response) {
+    window.Axios.get('/api/Foods?api_token=mwns7bequ6nn3KQitPu8O7AtqSIAGqwRtzuds9aMFpQ9iYsa2DWAZ5NDKnsd').then(function (response) {
       saveThis.orderProducts = response.data.data;
       localStorage.orderProducts = JSON.stringify(response.data.data);
     });
@@ -4272,7 +4272,6 @@ __webpack_require__.r(__webpack_exports__);
         }
       }; // ----------------------------------------------------------------------
       // the following methods are used to handle overflowing modals
-
       // ----------------------------------------------------------------------
 
 
@@ -5428,7 +5427,6 @@ __webpack_require__.r(__webpack_exports__);
             var targetBCR = target.getBoundingClientRect();
 
             if (targetBCR.width || targetBCR.height) {
-
               return [$$$1(target)[offsetMethod]().top + offsetBase, targetSelector];
             }
           }
@@ -6719,7 +6717,6 @@ function Sizzle( selector, context, results, seed ) {
 						if ( (elem = context.getElementById( m )) ) {
 
 							// Support: IE, Opera, Webkit
-
 							// getElementById can match elements by name instead of ID
 							if ( elem.id === m ) {
 								results.push( elem );

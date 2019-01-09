@@ -48,9 +48,9 @@
                 if (confirm("Are you sure ?")) {
                     let saveThis = this ;
                     window.axios.post('/api/makeFoodsOrder', {
-                        products: this.$props.cartProducts
+                        products: this.$props.cartProducts,
+                        api_token: "mwns7bequ6nn3KQitPu8O7AtqSIAGqwRtzuds9aMFpQ9iYsa2DWAZ5NDKnsd"
                     }).then(function (response) {
-                        console.log(response);
                         saveThis.$props.cartProducts = [] ;
                         localStorage.cartProducts = JSON.stringify(saveThis.$props.cartProducts);
                     }).catch(function (error) {

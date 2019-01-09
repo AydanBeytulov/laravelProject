@@ -6,6 +6,7 @@ use App\Http\Controllers\Room\FoodsController;
 use Illuminate\Http\Request;
 use App\RoomOptions;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class APIController
@@ -14,14 +15,13 @@ use App\Http\Controllers\Controller;
 class APIController extends Controller
 {
 
-    //@TODO -> Да видя да защитя API-то с токън
 
     /**
      * APIController constructor.
      */
     public function __construct()
     {
-      //  $this->middleware('auth:api');
+        $this->middleware('auth:api');
     }
 
     /**
@@ -68,7 +68,8 @@ class APIController extends Controller
 
     public function makeFoodsOrder(Request $request){
         if(isset($request['products']) && is_array($request['products'])){
-            if(FoodsController::buyProductsFromCart($request['products'])){
+            $FoodsController = new FoodsController();
+            if($FoodsController->buyProductsFromCart($request['products'])){
                  return response()->json(["response" => "Success" ],200);
              }else{
                 return response()->json(["response" => "Error with saving" ],500);

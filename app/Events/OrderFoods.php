@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\RoomsCartOrder;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -19,13 +20,11 @@ class OrderFoods
      * Create a new event instance.
      *
      * @param integer
-     * @return void
+     *
      */
     public function __construct($insertID)
     {
         $this->insertID = $insertID;
-
-        //@TODO: check if order exist
     }
 
     /**

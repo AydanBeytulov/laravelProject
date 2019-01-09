@@ -30,7 +30,7 @@
         mounted() {
 
             let saveThis = this;
-            window.Axios.get('/api/Foods').then(function (response) {
+            window.Axios.get('/api/Foods?api_token=mwns7bequ6nn3KQitPu8O7AtqSIAGqwRtzuds9aMFpQ9iYsa2DWAZ5NDKnsd').then(function (response) {
                 saveThis.orderProducts = response.data.data;
                 localStorage.orderProducts = JSON.stringify(response.data.data);
             });
