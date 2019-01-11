@@ -83,6 +83,8 @@ __Seeds:__
 
 __Factories:__
 
+[/database/factories/EventsFactory.php](/database/factories/EventsFactory.php)
+
 [/database/factories/FoodsFactory.php](/database/factories/FoodsFactory.php)
 
 __Events:__ 
