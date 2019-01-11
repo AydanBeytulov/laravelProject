@@ -10,9 +10,9 @@ Here some tags to review it faster:
 
 __API:__
 
-[/app/Http/Controllers/API/APIController.php - Custom API](/app/Http/Controllers/API/APIController.php)
+[/app/Http/Controllers/API/APIController.php - Custom API / AUTH with api token](/app/Http/Controllers/API/APIController.php)
 
-[/app/Http/Controllers/API/FoodsAPI.php - API with resource](/app/Http/Controllers/API/FoodsAPI.php)
+[/app/Http/Controllers/API/FoodsAPI.php - API with resource / AUTH with api token](/app/Http/Controllers/API/FoodsAPI.php)
 
 
 __Controllers:__
