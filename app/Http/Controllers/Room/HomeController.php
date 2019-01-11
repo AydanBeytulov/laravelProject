@@ -20,21 +20,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public static function showIndex()
+    public function showIndex()
     {
-        $dataForView = array();
+        $dataForView = $this->getUserCartAndInfo();
 
-        $dataForView["userInfo"] = RoomsInfo::where("userId",Auth::id())->first();
-        $dataForView['userCart'] = RoomsCartOrder::where("userId",Auth::id())->get();
+        return view('room.home',$dataForView);
+    }
+
+    private function getUserCartAndInfo(){
+        $data = array();
+
+        $data["userInfo"] = RoomsInfo::where("userId",Auth::id())->first();
+        $data['userCart'] = RoomsCartOrder::where("userId",Auth::id())->get();
 
         $totals = array();
         $totals['totalPrice'] = 0;
-        foreach($dataForView['userCart'] as $cartItem){
+        foreach($data['userCart'] as $cartItem){
             $totals['totalPrice'] += $cartItem->totalPrice;
         }
 
-        $dataForView['totals'] = $totals;
+        $data['totals'] = $totals;
 
-        return view('room.home',$dataForView);
+        return $data ;
     }
 }

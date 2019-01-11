@@ -17,7 +17,7 @@ class RoomsCart extends Model
             $column = "image";
         } elseif($this->attributes['itemTable'] == "events"){
             $relation = "App\Events";
-            $column = "picture";
+            $column = "image";
         }
 
         if($relation != ""){

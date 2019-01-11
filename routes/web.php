@@ -38,7 +38,8 @@ Route::group(["prefix" => "room"], function(){
 
 
     // Events routes
-    Route::get('/events','HomeController@index')->name('events');
+    Route::get('events','Room\EventsController@index')->name('events');
+    Route::post('events','Room\EventsController@registerForEvents')->name('registerForEvents');
 
     // Reservation routes
     Route::get('/reservation','HomeController@index')->name('reservation');

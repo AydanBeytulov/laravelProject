@@ -18,8 +18,9 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string("image");
-            $table->timestamp('start')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('start')->nullable();
             $table->timestamp('end')->nullable();
+            $table->decimal('price', 11, 2);
             $table->timestamps();
         });
     }

@@ -39,15 +39,18 @@ class HomeController extends Controller
 
         switch ($userData->type){
             case "room":
-                return RoomHome::showIndex();
+                $RoomHome = new RoomHome();
+                return $RoomHome->showIndex();
             break;
 
             case "admin":
-                return AdminHome::showIndex();
+                $AdminHome = new AdminHome();
+                return $AdminHome->showIndex();
             break;
 
             case "user":
-                return UserHome::showIndex();
+                $UserHome = new UserHome();
+                return $UserHome->showIndex();
             break;
             default:
                 Auth::logout();

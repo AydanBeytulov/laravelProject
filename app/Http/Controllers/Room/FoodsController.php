@@ -31,9 +31,13 @@ class FoodsController extends Controller
 
         $dataForView = array();
 
-        $dataForView['listFoods'] = Foods::all();
+        $dataForView['listFoods'] = $this->listFoods();
 
         return view("room.foods",$dataForView);
+    }
+
+    private function listFoods(){
+        return Foods::all(); ;
     }
 
     /**
