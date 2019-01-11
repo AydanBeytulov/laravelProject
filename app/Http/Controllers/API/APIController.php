@@ -66,6 +66,10 @@ class APIController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function makeFoodsOrder(Request $request){
         if(isset($request['products']) && is_array($request['products'])){
             $FoodsController = new FoodsController();

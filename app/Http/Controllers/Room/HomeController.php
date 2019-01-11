@@ -27,6 +27,9 @@ class HomeController extends Controller
         return view('room.home',$dataForView);
     }
 
+    /**
+     * @return array
+     */
     private function getUserCartAndInfo(){
         $data = array();
 

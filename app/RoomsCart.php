@@ -4,10 +4,20 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class RoomsCart
+ * @package App
+ */
 class RoomsCart extends Model
 {
+    /**
+     * @var string
+     */
     protected $table = "rooms_cart";
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function image()
     {
         $relation = "";
