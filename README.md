@@ -17,11 +17,11 @@ __API:__
 
 __Controllers:__
 
-[/app/Http/Controllers/Controller.php](/app/Http/Controllers/Controller.php)
+[/app/Http/Controllers/Controller.php - Redis](/app/Http/Controllers/Controller.php)
+
+[/app/Http/Controllers/Room/EventsController.php](/app/Http/Controllers/Room/EventsController.php)
 
 [/app/Http/Controllers/Room/FoodsController.php - Use mysql transaction](/app/Http/Controllers/Room/FoodsController.php)
-
-[/app/Http/Controllers/HomeController.php](/app/Http/Controllers/HomeController.php)
 
 [/app/Http/Controllers/Room/HomeController.php](/app/Http/Controllers/Room/HomeController.php)
 
@@ -82,6 +82,8 @@ __Seeds:__
 [/database/seeds/RoomInfoTableSeeder.php](/database/seeds/RoomInfoTableSeeder.php)
 
 __Factories:__
+
+[/database/factories/EventsFactory.php](/database/factories/EventsFactory.php)
 
 [/database/factories/FoodsFactory.php](/database/factories/FoodsFactory.php)
 
