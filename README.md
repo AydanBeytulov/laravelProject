@@ -1,5 +1,6 @@
 # CV project
-Laravel project - not finished yet (in progress)
+Laravel project - not finished yet (in progress).
+
 My LinkedIn profile: https://www.linkedin.com/in/aydanbeytulov/
 
 Hey! I start to make hotel room managment system. I'll connect it with atmel microcontrollers in future. 
