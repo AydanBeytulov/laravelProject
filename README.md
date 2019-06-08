@@ -1,5 +1,5 @@
 # CV project
-Laravel project - not finished yet (in progress).
+Laravel project - not finished yet (in progress, have to improve security).
 
 
 Hey! I start to make hotel room managment system. I'll connect it with atmel microcontrollers in future. 
